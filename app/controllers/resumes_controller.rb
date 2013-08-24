@@ -12,8 +12,8 @@ class ResumesController < ApplicationController
   def show
     @resume = Resume.find(params[:id])
 
-    //vh = ViewHistory.new(:time_viewed => Time.now, :ip => request.remote_ip, :resume_id => @resume.id)
-    //vh.save
+      vh = ViewHistory.new(:time_viewed => Time.now, :ip => request.remote_ip, :resume_id => @resume.id)
+      vh.save
 
   end
 
